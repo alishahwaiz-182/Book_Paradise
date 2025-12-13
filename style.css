@@ -1,0 +1,179 @@
+/* Navbar ka background aur links */
+.navbar {
+    background-color: #001f3f !important; /* Dark Blue */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #1e90ff !important; /* Light Blue */
+}
+
+.banner-section {
+  margin-top: 170px !important;  /* !important bootstrap ko override karega */
+}
+
+/* Explore Now button */
+.btn-explore {
+    border-radius: 50px;
+    padding: 8px 40px;
+}
+
+/* Banner image */
+.banner-img {
+    width: 800px;
+    height: 1000px;
+    object-fit: cover;
+    
+}
+
+/* Category card */
+.category-card {
+    width: 18rem;
+}
+
+/* Category images */
+.category-img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+/* Product images */
+.product-img {
+    width: 100%;              /* container ki width fill kare */
+    height: 250px;            /* sab images ki height fix */
+    object-fit: cover;        /* crop karke image ko fit kare */
+}
+
+
+/* Footer */
+footer {
+    background-color: #001f3f !important;
+    color: #fff !important;
+}
+footer h5,
+footer p,
+footer a {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #1e90ff !important;
+}
+footer hr {
+    border-color: #fff !important;
+}
+
+/* Modal css */
+
+.close-modal{
+  background: none;
+  color: black;
+  border: none;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+.modal{
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.modal.active{
+  top: 50%;
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.modal.body{
+  padding: 0.75rem;
+}
+
+/* End modal css */
+
+#overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay.active{
+  display: block;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.underline {
+  width: 150px;          /* line ki width (title se chhoti) */
+  height: 5px;           /* line ki motai */
+  background-color: black; /* Bootstrap primary color (blue) */
+  margin-top: 6px;      /* thoda gap upar se */
+  border-radius: 20px;    /* halka gol look */
+}
+/* Navbar */
+.navbar {
+  background-color: #001f3f !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #1e90ff !important;
+}
+
+/* Error Message */
+#error_message {
+  background: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  display: none;
+}
+#error_message.active {
+  display: block;
+}
+
+#name, #subject, #phone, #email, #message{
+  margin-top: 10px;
+  width: 150px;
+}
+
+
+/* Footer */
+footer {
+  background-color: #001f3f;
+  color: white;
+}
+
+
+
+.card-img-top {
+  height: 250px;   /* sab images ki same height */
+  object-fit: cover;  /* image ko crop karke fit karega */
+}
+

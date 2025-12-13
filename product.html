@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookParadise Website - Products</title>
+  <!-- Bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</head>
+<body>
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">BookParadise</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Featured Section -->
+<div class="featured py-5">
+  <div class="container">
+    <!-- Top Bar (All Products + Search + Sort) -->
+    <div class="row mb-4 align-items-center">
+      <!-- Title -->
+      <div class="col-12 col-md-4 mb-2 mb-md-0">
+        <h2 class="h4">All Products</h2>
+      </div>
+
+      <!-- Search -->
+      <div class="col-12 col-md-4 mb-2 mb-md-0">
+        <input type="search" onkeyup="filter()" class="form-control" placeholder="Search Here">
+      </div>
+
+      <!-- Sort Button -->
+      <div class="col-12 col-md-4 text-md-end">
+        <button onclick="sortList()" class="btn btn-primary w-100 w-md-auto">Sort By Price</button>
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="row g-4" id="product-list">
+      <!-- Product 1 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/book-1760998_1280.jpg" class="card-img-top img-fluid" alt="HTML Book">
+          <div class="card-body">
+            <h5 class="card-title product-name">HTML</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">80</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/book-2020460_1280.jpg" class="card-img-top img-fluid" alt="CSS Book">
+          <div class="card-body">
+            <h5 class="card-title product-name">CSS</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">30</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/book-3964050_1280.jpg" class="card-img-top img-fluid" alt="JavaScript Book">
+          <div class="card-body">
+            <h5 class="card-title product-name">JavaScript</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">20</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/book-3996723_1280.jpg" class="card-img-top img-fluid" alt="Angular book">
+          <div class="card-body">
+            <h5 class="card-title product-name">Angular</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">50</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/maple-leaf-638022_1280.jpg" class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5 class="card-title product-name">Learning Techniques</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">110</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/istockphoto-949118068-2048x2048.jpg" class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5 class="card-title product-name">Improving Productivity</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">350</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/flowers-7660120_1280.jpg" class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5 class="card-title product-name">Modern Learning</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">95</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card h-100 text-center p-3">
+          <img src="pictures/book-759873_1280.jpg" class="card-img-top img-fluid" alt="">
+          <div class="card-body">
+            <h5 class="card-title product-name">Mindful Learning</h5>
+            <div class="rating text-warning mb-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p class="card-text fw-bold">$<span class="price">150</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<!-- End Product List -->
+
+<!-- Start Footer -->
+<footer class="py-4">
+  <div class="container">
+    <div class="row">
+      
+      
+      <div class="col-md-4 mb-3 mb-md-0">
+        <a href="index.html" class="d-inline-block fs-4 fw-bold text-decoration-none text-white">
+          BookParadise
+        </a>
+      </div>
+
+      
+      <div class="col-md-4 mb-3 mb-md-0">
+        <a href="index.html" class="d-inline-block fs-4 fw-bold text-decoration-none text-white">BookParadise</a>
+        <h5 class="fw-semibold">About Us</h5>
+        <p class="mb-0">
+          Your one-stop shop for all your book requirements.
+        </p>
+      </div>
+
+      
+      <div class="col-md-4">
+        <h5 class="fw-semibold">Follow Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none d-block">Facebook</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block">Twitter</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block">Instagram</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block">YouTube</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    
+    <hr class="border-light">
+
+    
+    <p class="text-center mb-0">&copy; 2023 BookParadise. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- End Footer -->
+
+      <!-- Start Modal -->
+
+   <!-- Modal 1 -->
+
+   <div class="modal" id="modal1">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/book-1760998_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>HTML</h1>
+            <h4>Price: $80</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 1 End -->
+
+   <!-- Modal 2 -->
+
+   <div class="modal" id="modal2">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/book-2020460_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>CSS</h1>
+            <h4>Price: $30</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 2 End -->
+
+   <!-- Modal 3 -->
+
+   <div class="modal" id="modal3">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/book-1760998_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>JavaScript</h1>
+            <h4>Price: $20</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 3 End -->
+
+   <!-- Modal 4 -->
+
+   <div class="modal" id="modal4">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/book-3996723_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>Angular</h1>
+            <h4>Price: $50</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 4 End -->
+
+   <!-- Modal 5 -->
+
+   <div class="modal" id="modal5">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/maple-leaf-638022_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>Learning programming Techniques</h1>
+            <h4>Price: $110</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 5 End -->
+
+   <!-- Modal 6 -->
+
+   <div class="modal" id="modal6">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/istockphoto-949118068-2048x2048.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>Improving Productivity</h1>
+            <h4>Price: $35</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 6 End -->
+
+   <!-- Modal 7 -->
+
+   <div class="modal" id="modal7">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/flowers-7660120_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>Modern Programming</h1>
+            <h4>Price: $95</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Modal 7 End -->
+
+   <!-- Modal 8 -->
+
+   <div class="modal" id="modal8">
+    <div class="single-item">
+      <div class="small-container">
+        <div class="modal-header">
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="pictures/book-759873_1280.jpg" width="100%">
+          </div>
+          <div class="col-2">
+            <p>Home / Books</p>
+            <h1>Mindful Learning</h1>
+            <h4>Price: $150</h4>
+            <h4>Quantity: </h4>
+            <select\>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <a href="" class="btn">Add To Chart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div id="overlay"></div>
+
+   <!-- Modal 8 End -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
