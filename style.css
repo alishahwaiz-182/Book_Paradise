@@ -1,56 +1,47 @@
-/* Navbar ka background aur links */
 .navbar {
-    background-color: #001f3f !important; /* Dark Blue */
+    background-color: #001f3f !important;
 }
-
 .navbar .nav-link,
 .navbar .navbar-brand {
     color: #fff !important;
     transition: color 0.3s ease;
 }
-
 .navbar .nav-link:hover {
-    color: #1e90ff !important; /* Light Blue */
+    color: #1e90ff !important;
 }
-
 .banner-section {
-  margin-top: 170px !important;  /* !important bootstrap ko override karega */
+    margin-top: 80px !important;
 }
-
-/* Explore Now button */
+@media (max-width: 768px) {
+    .banner-section {
+        margin-top: 30px !important;
+        text-align: center;
+    }
+}
 .btn-explore {
     border-radius: 50px;
     padding: 8px 40px;
 }
-
-/* Banner image */
 .banner-img {
-    width: 800px;
-    height: 1000px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    
 }
-
-/* Category card */
 .category-card {
-    width: 18rem;
+    width: 100%;
 }
-
-/* Category images */
 .category-img {
     height: 150px;
     width: 150px;
     object-fit: contain;
+    margin: auto;
+    display: block;
 }
-/* Product images */
 .product-img {
-    width: 100%;              /* container ki width fill kare */
-    height: 250px;            /* sab images ki height fix */
-    object-fit: cover;        /* crop karke image ko fit kare */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
-
-
-/* Footer */
 footer {
     background-color: #001f3f !important;
     color: #fff !important;
@@ -67,113 +58,75 @@ footer a:hover {
 footer hr {
     border-color: #fff !important;
 }
-
-/* Modal css */
-
-.close-modal{
-  background: none;
-  color: black;
-  border: none;
-  font-size: 3.5rem;
-  cursor: pointer;
+.close-modal {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 3.5rem;
+    cursor: pointer;
 }
-
-.modal{
-  position: fixed;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: top 0.3s ease-in-out;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  z-index: 2;
-  background-color: #fff;
+.modal {
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
 }
-
-.modal.active{
-  top: 50%;
+.modal.active {
+    top: 50%;
 }
-
-.modal-header{
-  display: flex;
-  flex-direction: row-reverse;
+.modal-header {
+    display: flex;
+    flex-direction: row-reverse;
 }
-
-.modal.body{
-  padding: 0.75rem;
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
-
-/* End modal css */
-
-#overlay{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+#overlay.active {
+    display: block;
 }
-
-#overlay.active{
-  display: block;
-}
-
 body {
-  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .underline {
-  width: 150px;          /* line ki width (title se chhoti) */
-  height: 5px;           /* line ki motai */
-  background-color: black; /* Bootstrap primary color (blue) */
-  margin-top: 6px;      /* thoda gap upar se */
-  border-radius: 20px;    /* halka gol look */
+    width: 150px;
+    height: 5px;
+    background-color: black;
+    margin-top: 6px;
+    border-radius: 20px;
 }
-/* Navbar */
-.navbar {
-  background-color: #001f3f !important;
-}
-.navbar .nav-link,
-.navbar .navbar-brand {
-  color: #fff !important;
-  transition: color 0.3s ease;
-}
-.navbar .nav-link:hover {
-  color: #1e90ff !important;
-}
-
-/* Error Message */
 #error_message {
-  background: #f8d7da;
-  color: #842029;
-  border: 1px solid #f5c2c7;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 15px;
-  font-size: 15px;
-  font-weight: 500;
-  display: none;
+    background: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    display: none;
 }
 #error_message.active {
-  display: block;
+    display: block;
 }
-
-#name, #subject, #phone, #email, #message{
-  margin-top: 10px;
-  width: 150px;
+#name, #subject, #phone, #email, #message {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
 }
-
-
-/* Footer */
-footer {
-  background-color: #001f3f;
-  color: white;
-}
-
-
-
 .card-img-top {
-  height: 250px;   /* sab images ki same height */
-  object-fit: cover;  /* image ko crop karke fit karega */
+    height: 250px;
+    object-fit: cover;
 }
-
