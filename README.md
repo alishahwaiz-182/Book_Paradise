@@ -3,7 +3,7 @@
 A responsive online bookstore landing page built as a frontend practice project.
 
 ##  Live Demo
-[Click here to view](https://alishahwaiz-182.github.io/Book_Paradise/)
+[Click here to view](https://bookparadise-store.netlify.app/)
 
 ##  Features
 - Responsive navbar with mobile hamburger menu
